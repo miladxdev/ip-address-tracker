@@ -1,0 +1,17 @@
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        padding: 40px;
+      }
+      #mapid {
+        height: 400px;
+        /* border: 1px solid blue; */
+        border-radius: 40px;
+        overflow: hidden;
+      }
