@@ -1,6 +1,7 @@
 let key = "at_AmOTQApybsh7EYLZgDtnZeOLPtMjL";
-let ipAdress = "8.8.8.8";
-let url = `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ipAdress}`;
+let ipAddress = "5.218.104.56";
+let domain = "apple.com";
+let url = `https://geo.ipify.org/api/v1?apiKey=${key}&ipAddress=${ipAddress}&domain=${domain}`;
 
 fetch(url)
   .then((response) => response.json())
