@@ -5,16 +5,19 @@ let ipTracker = {
 
   fetchIp: function (ipAddress) {
     displayLoading();
+
     fetch(`https://geo.ipify.org/api/v1?apiKey=${this.key}&ipAddress=${ipAddress}&domain=${this.domain}`)
       .then((response) => response.json())
       .then((data) => {
         this.displayData(data);
         console.log(data);
-      });
+      })
+      .catch((error) => this.handleErrors(error));
   },
 
   displayData: function (data) {
     hideLoading();
+
     let { lat } = data.location;
     let { lng } = data.location;
 
@@ -41,6 +44,10 @@ let ipTracker = {
     document.querySelector("#isp").innerHTML = isp;
   },
 
+  handleErrors: function (error) {
+    console.log(error);
+  },
+
   search: function () {
     this.fetchIp(document.querySelector("#ip-input").value);
     console.log(document.querySelector("#ip-input").value);
@@ -54,15 +61,15 @@ document.querySelector("#search-btn").addEventListener("click", () => {
 // ipTracker.fetchIp("8.8.8.8");
 
 const loader = document.querySelector("#loading");
+
 function displayLoading() {
   loader.classList.add("display");
-  // to stop loading after some time
+
   setTimeout(() => {
     loader.classList.remove("display");
   }, 20000);
 }
 
-// hiding loading
 function hideLoading() {
   loader.classList.remove("display");
 }

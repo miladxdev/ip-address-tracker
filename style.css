@@ -18,10 +18,10 @@ body {
 }
 
 .header {
-  background-image: url(images/pattern-bg.png);
+  background-image: url(img/pattern-bg.png);
   background-size: cover;
   /* background: lightslategrey; */
-  padding: 0 48px;
+  padding: 0 40px;
   font-size: 18px;
 }
 
@@ -87,7 +87,7 @@ body {
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 20px;
   background: #efe9e1;
   box-shadow: 0px 4px 16px -4px grey;
@@ -98,7 +98,7 @@ body {
 
 .data section {
   padding: 10px;
-  width: 150px;
+  width: 158px;
   font-size: 18px;
   font-weight: bold;
   /* border: 1px solid red; */
@@ -115,6 +115,7 @@ body {
 }
 
 #mapid {
+  position: relative;
   background: #4a4dad;
   z-index: 0;
 }
@@ -165,5 +166,33 @@ body {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-title {
+    font-size: 24px;
+  }
+  .data {
+    position: absolute;
+    top: 160px;
+    display: block;
+    font-size: 14px;
+    width: 70%;
+  }
+  .data section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    border: none;
+  }
+  .data-title {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-title {
+    font-size: 18px;
   }
 }
