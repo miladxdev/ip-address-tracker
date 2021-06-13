@@ -16,7 +16,7 @@ let ipTracker = {
     let { lat } = data.location;
     let { lng } = data.location;
 
-    let mymap = L.map("mapid").setView([lat, lng], 13);
+    let mymap = L.map("mapid").setView([lat, lng], 12);
 
     L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
       attribution:

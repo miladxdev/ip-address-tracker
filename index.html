@@ -25,12 +25,29 @@
     <!-- add offset value dynamically using the API -->
     <!-- ISP -->
     <div class="header">
-      <div class="title">IP Address Tracker</div>
+      <div class="header-title">IP Address Tracker</div>
       <div class="search-bar">
         <input type="text" name="search" id="ip-input" placeholder="Search for any IP address or domain" />
         <button id="search-btn"><i class="fa fa-search"></i></button>
       </div>
-      <div class="info"></div>
+      <div class="info">
+        <section>
+          <div class="info-title">IP ADDRESS</div>
+          <div id="ipaddresss">192.168.100.101</div>
+        </section>
+        <section>
+          <div class="info-title">LOCATION</div>
+          <div id="location">London, EN, 1001</div>
+        </section>
+        <section>
+          <div class="info-title">TIMEZONE</div>
+          <div id="timezone">UTC -05:00</div>
+        </section>
+        <section>
+          <div class="info-title">ISP</div>
+          <div id="isp">SpaceX Star Link</div>
+        </section>
+      </div>
     </div>
 
     <div id="mapid"></div>

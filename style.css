@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
 }
+
+:root {
+  --veryDarkGray: hsl(0, 0%, 17%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
 body {
   display: grid;
   grid-template-rows: 1fr 2fr;
@@ -15,11 +21,11 @@ body {
   position: relative;
   background-image: url(images/pattern-bg.png);
   background-size: cover;
-  padding: 40px;
+  padding: 60px;
   font-size: 18px;
 }
 
-.header .title {
+.header-title {
   position: absolute;
   left: 50%;
   top: 40px;
@@ -29,10 +35,7 @@ body {
   color: #fafafa;
   font-size: 36px;
 }
-.header .banner {
-  max-width: 600px;
-  padding: 4px;
-}
+
 .search-bar {
   position: relative;
   top: 50%;
@@ -77,10 +80,43 @@ body {
   background: hsl(0, 0%, 24%);
 }
 
+.info {
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  max-width: 900px;
+  padding: 24px;
+  background: #fafafa;
+  box-shadow: 0px 4px 8px -4px lightgrey;
+  text-align: center;
+  color: var(--veryDarkGray);
+  border-radius: 20px;
+  z-index: 1;
+}
+.info section {
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  /* border: 1px solid red; */
+}
+.info section:not(:first-child) {
+  border-left: 1px solid lightgrey;
+}
+.info-title {
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: var(--darkGray);
+}
 #mapid {
-  background: lightgreen;
+  position: relative;
+  background: #4a4dad;
   z-index: 0;
-  /* opacity: 0.5; */
 }
 
 .attribution {
