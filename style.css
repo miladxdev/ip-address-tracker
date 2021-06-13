@@ -5,21 +5,82 @@
 }
 body {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr;
   height: 100vh;
+  font-family: "Rubik", sans-serif;
 }
 
-.header img {
-  display: block;
-  width: 100%;
+.header {
+  position: relative;
+  background-image: url(images/pattern-bg.png);
+  background-size: cover;
+  padding: 40px;
+  font-size: 18px;
+}
+
+.header .title {
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+
+  text-align: center;
+  color: #fafafa;
+  font-size: 36px;
+}
+.header .banner {
+  max-width: 600px;
+  padding: 4px;
+}
+.search-bar {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  max-width: 500px;
+  height: 50px;
+  /* border: 1px solid red; */
+  font-size: 18px;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#ip-input {
+  width: 90%;
   height: 100%;
-  opacity: 1;
+  outline: none;
+  padding: 0 20px;
+  border: none;
+  background: #fafafa;
+  font-size: 18px;
+  font-family: inherit;
+}
+
+#search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: 10%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: hsl(0, 0%, 17%);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background: hsl(0, 0%, 24%);
 }
 
 #mapid {
   background: lightgreen;
   z-index: 0;
+  /* opacity: 0.5; */
 }
 
 .attribution {
