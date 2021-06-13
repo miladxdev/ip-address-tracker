@@ -18,10 +18,10 @@ body {
 }
 
 .header {
-  position: relative;
   background-image: url(images/pattern-bg.png);
   background-size: cover;
-  padding: 60px;
+  /* background: lightslategrey; */
+  padding: 0 48px;
   font-size: 18px;
 }
 
@@ -30,24 +30,23 @@ body {
   left: 50%;
   top: 40px;
   transform: translateX(-50%);
-
   text-align: center;
   color: #fafafa;
-  font-size: 36px;
+  font-size: 28px;
 }
 
 .search-bar {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin: auto;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+
   max-width: 500px;
   height: 50px;
   /* border: 1px solid red; */
   font-size: 18px;
   border-radius: 12px;
   overflow: hidden;
-  z-index: 1;
 }
 
 #ip-input {
@@ -57,8 +56,9 @@ body {
   padding: 0 20px;
   border: none;
   background: #fafafa;
+  background: #efe9e1;
   font-size: 18px;
-  font-family: inherit;
+  font-family: "Rubik", sans-serif;
 }
 
 #search-btn {
@@ -80,41 +80,41 @@ body {
   background: hsl(0, 0%, 24%);
 }
 
-.info {
+.data {
   position: relative;
-  top: 100px;
+  top: 130px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   max-width: 900px;
-  padding: 24px;
-  background: #fafafa;
-  box-shadow: 0px 4px 8px -4px lightgrey;
-  text-align: center;
+  padding: 20px;
+  background: #efe9e1;
+  box-shadow: 0px 4px 16px -4px grey;
   color: var(--veryDarkGray);
   border-radius: 20px;
   z-index: 1;
 }
-.info section {
+
+.data section {
   padding: 10px;
-  width: 200px;
-  text-align: center;
+  width: 150px;
   font-size: 18px;
   font-weight: bold;
   /* border: 1px solid red; */
 }
-.info section:not(:first-child) {
+
+.data section:not(:first-child) {
   border-left: 1px solid lightgrey;
 }
-.info-title {
-  margin-bottom: 30px;
+
+.data-title {
+  margin-bottom: 20px;
   font-size: 14px;
   color: var(--darkGray);
 }
+
 #mapid {
-  position: relative;
   background: #4a4dad;
   z-index: 0;
 }
@@ -127,6 +127,43 @@ body {
   font-size: 11px;
   text-align: center;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+#loading {
+  position: absolute;
+  top: 9px;
+  right: 60px;
+  width: 32px;
+  height: 32px;
+  border: 4px solid #4a4dad;
+  border-top: 4px dotted transparent;
+  border-radius: 100%;
+  visibility: hidden;
+  opacity: 0.7;
+  animation: spin 1s infinite linear;
+}
+
+#loading.display {
+  visibility: visible;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

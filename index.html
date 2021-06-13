@@ -24,37 +24,44 @@
     <!-- IP Address Tracker Search for any IP address or domain IP Address Location Timezone UTC -->
     <!-- add offset value dynamically using the API -->
     <!-- ISP -->
+   
+    </div>
     <div class="header">
       <div class="header-title">IP Address Tracker</div>
       <div class="search-bar">
-        <input type="text" name="search" id="ip-input" placeholder="Search for any IP address or domain" />
+        <div id="loading"></div>
+        <input type="text" id="ip-input" placeholder="Search for any IP address or domain" />
         <button id="search-btn"><i class="fa fa-search"></i></button>
       </div>
-      <div class="info">
+
+       <div class="data">
         <section>
-          <div class="info-title">IP ADDRESS</div>
+          <div class="data-title">IP ADDRESS</div>
           <div id="ipaddresss">192.168.100.101</div>
         </section>
         <section>
-          <div class="info-title">LOCATION</div>
-          <div id="location">London, EN, 1001</div>
+          <div class="data-title">LOCATION</div>
+          <div id="location">Brooklyn, NY, 10001</div>
         </section>
         <section>
-          <div class="info-title">TIMEZONE</div>
+          <div class="data-title">TIMEZONE</div>
           <div id="timezone">UTC -05:00</div>
         </section>
         <section>
-          <div class="info-title">ISP</div>
-          <div id="isp">SpaceX Star Link</div>
+          <div class="data-title">ISP</div>
+          <div id="isp">SpaceX StarLink</div>
         </section>
       </div>
     </div>
 
+     
+    
+
     <div id="mapid"></div>
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Milad Gharibi</a>.
-    </div>
+    </div> -->
 
     <script src="script.js"></script>
   </body>

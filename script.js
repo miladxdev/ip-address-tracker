@@ -4,6 +4,7 @@ let ipTracker = {
   domain: "",
 
   fetchIp: function (ipAddress) {
+    displayLoading();
     fetch(`https://geo.ipify.org/api/v1?apiKey=${this.key}&ipAddress=${ipAddress}&domain=${this.domain}`)
       .then((response) => response.json())
       .then((data) => {
@@ -13,6 +14,7 @@ let ipTracker = {
   },
 
   displayData: function (data) {
+    hideLoading();
     let { lat } = data.location;
     let { lng } = data.location;
 
@@ -29,6 +31,14 @@ let ipTracker = {
     }).addTo(mymap);
 
     L.marker([lat, lng]).addTo(mymap);
+
+    let { ip, isp } = data;
+    let { city, country, region, timezone } = data.location;
+
+    document.querySelector("#ipaddresss").innerHTML = ip;
+    document.querySelector("#location").innerHTML = `${city}, ${country}, ${region}`;
+    document.querySelector("#timezone").innerHTML = `UTC ${timezone}`;
+    document.querySelector("#isp").innerHTML = isp;
   },
 
   search: function () {
@@ -42,3 +52,17 @@ document.querySelector("#search-btn").addEventListener("click", () => {
 });
 
 // ipTracker.fetchIp("8.8.8.8");
+
+const loader = document.querySelector("#loading");
+function displayLoading() {
+  loader.classList.add("display");
+  // to stop loading after some time
+  setTimeout(() => {
+    loader.classList.remove("display");
+  }, 20000);
+}
+
+// hiding loading
+function hideLoading() {
+  loader.classList.remove("display");
+}
