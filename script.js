@@ -1,3 +1,17 @@
+const loader = document.querySelector("#loading");
+
+function displayLoading() {
+  loader.classList.add("display");
+
+  setTimeout(() => {
+    loader.classList.remove("display");
+  }, 20000);
+}
+
+function hideLoading() {
+  loader.classList.remove("display");
+}
+
 let ipTracker = {
   key: "at_AmOTQApybsh7EYLZgDtnZeOLPtMjL",
 
@@ -66,19 +80,5 @@ document.querySelector("#search-btn").addEventListener("click", () => {
   ipTracker.search();
 });
 
-// default ip
 ipTracker.fetchIp("8.8.8.8");
-
-const loader = document.querySelector("#loading");
-
-function displayLoading() {
-  loader.classList.add("display");
-
-  setTimeout(() => {
-    loader.classList.remove("display");
-  }, 20000);
-}
-
-function hideLoading() {
-  loader.classList.remove("display");
-}
+// default ip
