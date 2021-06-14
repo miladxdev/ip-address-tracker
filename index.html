@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+    <!-- fontawesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -11,30 +12,28 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <title>IP Address Tracker</title>
+    <!-- style file -->
     <link rel="stylesheet" href="style.css" />
+    <!-- leaflet CDN -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <title>IP Address Tracker</title>
   </head>
   <body>
-    <!-- IP Address Tracker Search for any IP address or domain IP Address Location Timezone UTC -->
-    <!-- add offset value dynamically using the API -->
-    <!-- ISP -->
-   
-    </div>
     <div class="header">
       <div class="header-title"><h3>IP Address Tracker</h3></div>
+
       <div class="search-bar">
         <div id="loading"></div>
         <input type="text" id="ip-input" placeholder="Search for any IP address or domain" />
         <button id="search-btn"><i class="fa fa-search"></i></button>
       </div>
 
-       <div class="data">
+      <div class="data">
         <section>
           <div class="data-title">IP ADDRESS</div>
           <div id="ipaddresss">&nbsp;</div>
@@ -54,15 +53,7 @@
       </div>
     </div>
 
-     
-    
-
-    <div id="mapid">
-    </div>
-
-    <!-- <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Milad Gharibi</a>.
-    </div> -->
+    <div id="mapid"></div>
 
     <script src="script.js"></script>
   </body>

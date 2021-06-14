@@ -80,5 +80,5 @@ document.querySelector("#search-btn").addEventListener("click", () => {
   ipTracker.search();
 });
 
-ipTracker.fetchIp("8.8.8.8");
 // default ip
+ipTracker.fetchIp("8.8.8.8");

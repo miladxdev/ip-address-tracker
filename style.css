@@ -20,7 +20,6 @@ body {
 .header {
   background-image: url(img/pattern-bg.png);
   background-size: cover;
-  /* background: lightslategrey; */
   padding: 0 40px;
   font-size: 18px;
 }
@@ -40,10 +39,8 @@ body {
   top: 90px;
   left: 50%;
   transform: translateX(-50%);
-
   max-width: 500px;
   height: 50px;
-  /* border: 1px solid red; */
   font-size: 18px;
   border-radius: 12px;
   overflow: hidden;
@@ -103,7 +100,6 @@ body {
   width: 158px;
   font-size: 18px;
   font-weight: bold;
-  /* border: 1px solid red; */
 }
 
 .data section:not(:first-child) {
@@ -123,7 +119,6 @@ body {
 }
 
 .attribution {
-  /* border: 1px solid blue; */
   position: fixed;
   left: 10px;
   bottom: 2px;
