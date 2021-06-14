@@ -55,10 +55,12 @@ body {
   outline: none;
   padding: 0 20px;
   border: none;
-  background: #fafafa;
   background: #efe9e1;
   font-size: 18px;
   font-family: "Rubik", sans-serif;
+}
+#ip-input:hover {
+  background: #e0dbd3;
 }
 
 #search-btn {
@@ -171,19 +173,24 @@ body {
 
 @media screen and (max-width: 768px) {
   .header-title {
+    top: 10px;
     font-size: 24px;
+  }
+  .search-bar {
+    top: 50px;
   }
   .data {
     position: absolute;
-    top: 160px;
+    top: 120px;
+    padding: 4px;
     display: block;
-    font-size: 14px;
     width: 70%;
   }
   .data section {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
+    font-size: 16px;
     border: none;
   }
   .data-title {

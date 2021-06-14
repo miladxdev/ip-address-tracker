@@ -33,6 +33,15 @@ let ipTracker = {
       accessToken: "pk.eyJ1IjoiaXRzbWlsYWQiLCJhIjoiY2twdHg4YTJ2MDc1bzJvbnpkMzM1NTNnZCJ9.ES0tgt90-43JoRJEPO9RHg",
     }).addTo(mymap);
 
+    // let myIcon = L.icon({
+    //   iconUrl: "./img/icon-location.svg",
+    //   iconSize: [30, 40],
+    //   iconAnchor: [22, 94],
+    //   popupAnchor: [-3, -76],
+    //   shadowSize: [68, 95],
+    //   shadowAnchor: [22, 94],
+    // });
+
     L.marker([lat, lng]).addTo(mymap);
 
     let { ip, isp } = data;
@@ -50,7 +59,6 @@ let ipTracker = {
 
   search: function () {
     this.fetchIp(document.querySelector("#ip-input").value);
-    console.log(document.querySelector("#ip-input").value);
   },
 };
 
