@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [frontendmentor.io](https://www.frontendmentor.io/solutions/ip-address-tracker-bb9e8Co-e)
+- Solution URL: [frontendmentor.io/solutions/ip-address-tracker-bb9e8Co-e](https://www.frontendmentor.io/solutions/ip-address-tracker-bb9e8Co-e)
 - Live Site URL: [miladxdev.github.io/ip-address-tracker](https://miladxdev.github.io/ip-address-tracker/)
 
 ## My process
@@ -54,12 +54,8 @@ I learned about fetch api
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
-- Website - [Milad Garibi](https://www.your-site.com)
 - Frontend Mentor - [@miladxdev](https://www.frontendmentor.io/profile/miladxdev)
 - Twitter - [@\_itsmilad](https://www.twitter.com/_itsmilad)
 
