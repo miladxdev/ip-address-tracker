@@ -1,4 +1,5 @@
 const loader = document.querySelector("#loading");
+let mymap = null;
 
 function displayLoading() {
   loader.classList.add("display");
@@ -20,7 +21,7 @@ let ipTracker = {
   fetchIp: function (ipAddress) {
     displayLoading();
 
-    fetch(`https://geo.ipify.org/api/v1?apiKey=${this.key}&ipAddress=${ipAddress}&domain=${this.domain}`)
+    fetch(`https://geo.ipify.org/api/v1?apiKey=${this.key}&ipAddress=${ipAddress}`) // &domain=${this.domain}
       .then((response) => response.json())
       .then((data) => {
         this.displayData(data);
@@ -31,11 +32,10 @@ let ipTracker = {
 
   displayData: function (data) {
     hideLoading();
-
     let { lat } = data.location;
     let { lng } = data.location;
 
-    let mymap = L.map("mapid").setView([lat, lng], 12);
+    mymap = L.map("mapid").setView([lat, lng], 12);
 
     L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
       attribution:
@@ -72,6 +72,7 @@ let ipTracker = {
   },
 
   search: function () {
+    mymap.remove();
     this.fetchIp(document.querySelector("#ip-input").value);
   },
 };
