@@ -57,6 +57,6 @@ I learned about fetch api
 ## Author
 
 - Frontend Mentor - [@miladxdev](https://www.frontendmentor.io/profile/miladxdev)
-- Twitter - [@\_itsmilad](https://www.twitter.com/_itsmilad)
+- Twitter - [@](https://www.twitter.com/)
 
 ## Acknowledgments
